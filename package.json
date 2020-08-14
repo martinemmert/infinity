@@ -12,7 +12,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint . --cache --cache-location .eslint-cache --fix",
-    "lint:types": "node --max-old-space-size=4096 ./node_modules/eslint/bin/eslint.js . --cache --cache-location .eslint-cache-typed --config ./.eslintrc-typed.js --ext .ts,.tsx,.d.ts --no-eslintrc --no-inline-config"
+    "lint:types": "node --max-old-space-size=4096 ./node_modules/eslint/bin/eslint.js . --cache --cache-location .eslint-cache-typed --config ./.eslintrc-typed.js --ext .ts,.tsx,.d.ts --no-eslintrc --no-inline-config",
+    "release": "standard-version"
   },
   "dependencies": {
     "next": "9.5.2",
@@ -52,6 +53,7 @@
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "react-is": "^16.13.1",
+    "standard-version": "^8.0.2",
     "typescript": "^3.9.7"
   },
   "husky": {
