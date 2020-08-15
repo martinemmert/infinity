@@ -6,17 +6,20 @@
     "node": ">=14.3.0"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "dev": "NODE_ENV=development next dev",
+    "build": "NODE_ENV=production next build",
+    "start": "NODE_ENV=production next start",
+    "storybook": "start-storybook -p 6006 -s ./public",
+    "build-storybook": "build-storybook -s ./public",
     "lint": "eslint . --cache --cache-location .eslint-cache --fix",
     "lint:types": "node --max-old-space-size=4096 ./node_modules/eslint/bin/eslint.js . --cache --cache-location .eslint-cache-typed --config ./.eslintrc-typed.js --ext .ts,.tsx,.d.ts --no-eslintrc --no-inline-config",
+    "styles:dev": "NODE_ENV=development postcss ./styles/main.css -o ./public/styles/main.css",
+    "styles:prod": "NODE_ENV=production postcss ./styles/main.css -o ./public/styles/main.css -m",
     "release": "standard-version"
   },
   "dependencies": {
     "next": "9.5.2",
+    "postcss-import": "^12.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
@@ -51,9 +54,12 @@
     "eslint-plugin-unicorn": "^21.0.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
+    "postcss-cli": "^7.1.1",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.5",
     "react-is": "^16.13.1",
     "standard-version": "^8.0.2",
+    "tailwindcss": "^1.6.2",
     "typescript": "^3.9.7"
   },
   "husky": {
