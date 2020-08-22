@@ -15,12 +15,12 @@
     "jsx": "preserve"
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.stories.ts",
-    "**/*.stories.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.stories.ts",
+    "src/**/*.stories.tsx",
+    "src/**/*.spec.ts",
+    "src/**/*.spec.tsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -11,10 +11,10 @@
     "start": "NODE_ENV=production next start",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -s ./public",
-    "lint": "eslint . --cache --cache-location .eslint-cache --fix",
-    "lint:types": "node --max-old-space-size=4096 ./node_modules/eslint/bin/eslint.js . --cache --cache-location .eslint-cache-typed --config ./.eslintrc-typed.js --ext .ts,.tsx,.d.ts --no-eslintrc --no-inline-config",
-    "styles:dev": "NODE_ENV=development postcss ./styles/main.css -o ./public/styles/main.css",
-    "styles:prod": "NODE_ENV=production postcss ./styles/main.css -o ./public/styles/main.css -m",
+    "lint": "eslint ./src --cache --cache-location .eslint-cache --fix",
+    "lint:types": "node --max-old-space-size=4096 ./node_modules/eslint/bin/eslint.js ./src --cache --cache-location .eslint-cache-typed --config ./.eslintrc-typed.js --ext .ts,.tsx,.d.ts --no-eslintrc --no-inline-config",
+    "styles:dev": "NODE_ENV=development postcss ./src/styles/main.css -o ./public/styles/main.css",
+    "styles:prod": "NODE_ENV=production postcss ./src/styles/main.css -o ./public/styles/main.css -m",
     "release": "standard-version"
   },
   "dependencies": {
